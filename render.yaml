@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: nightscout
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: API_SECRET
+        value: 2009
+      - key: MONGODB_URI
+        value: DEINE_MONGODB_URI
